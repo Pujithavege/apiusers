@@ -27,7 +27,22 @@ app.get('/api/users',(req,res)=>res.json(users));
 
 // GET All USERS in table format
 app.get('/api/users/table', (req, res) => {
-    const tableHtml = `<table>
+    const tableHtml = `
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <table>
         <thead>
             <tr>
                 <th>ID</th>
