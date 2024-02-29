@@ -21,9 +21,7 @@ const PORT=3001;
 app.listen(PORT, () => console.log(`Server is Running ${PORT}`));
 
 
-//GET All USERS
 
-app.get('/api/users',(req,res)=>res.json(users));
 // GET All USERS in table format
 app.get('/api/users/table', (req, res) => {
     const tableHtml = `<table>
